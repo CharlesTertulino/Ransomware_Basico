@@ -9,7 +9,7 @@ dados_arquivo = arquivo.read()
 arquivo.close()
 
 ## CHAVE DE DESCRITOGRAFIA
-chave = "exponencialmente"
+chave = b"exponencialmente"
 aes = pyaes.AESModeOfOperationCTR(chave)
 dados_descripto = aes.decrypt(dados_arquivo)
 
